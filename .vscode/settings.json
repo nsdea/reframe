@@ -1,0 +1,26 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        ".vscode": true,
+        "prettypedia/prettypedia/__pycache__": true,
+        "prettypedia/__pycache__": true,
+        "reframe/__pycache__": true,
+        "reframe/reframe/__pycache__": true,
+        "reframe/static/css/frame.css": true,
+        "reframe/static/css/frame.css.map": true
+    },
+    "hide-files.files": [
+        ".vscode",
+        "prettypedia/prettypedia/__pycache__",
+        "prettypedia/__pycache__",
+        "reframe/__pycache__",
+        "reframe/reframe/__pycache__",
+        "reframe/static/css/frame.css",
+        "reframe/static/css/frame.css.map"
+    ]
+}

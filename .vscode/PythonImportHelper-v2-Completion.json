@@ -1,0 +1,101 @@
+[
+    {
+        "label": "flask",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "flask",
+        "description": "flask",
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "wikipedia",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "wikipedia",
+        "description": "wikipedia",
+        "detail": "wikipedia",
+        "documentation": {}
+    },
+    {
+        "label": "wikipediaapi",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "wikipediaapi",
+        "description": "wikipediaapi",
+        "detail": "wikipediaapi",
+        "documentation": {}
+    },
+    {
+        "label": "colorama",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "colorama",
+        "description": "colorama",
+        "detail": "colorama",
+        "documentation": {}
+    },
+    {
+        "label": "reframe",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "reframe",
+        "description": "reframe",
+        "detail": "reframe",
+        "documentation": {}
+    },
+    {
+        "label": "home",
+        "kind": 2,
+        "importPath": "reframe.reframe.reframe",
+        "description": "reframe.reframe.reframe",
+        "peekOfCode": "def home():\n    return flask.render_template('reframe/templates/home.html')\n@frame_bp.route('/wiki/<title>')\ndef article_page(title):\n    article = wikipediaapi.Wikipedia('en', extract_format=wikipediaapi.ExtractFormat.HTML).page(title)\n    content = article.text\n    return flask.render_template('reframe/templates/article.html', title=title, content=content)\n@frame_bp.route('/wiki/Special:Search')\ndef search():\n    query = flask.request.args.get('search')",
+        "detail": "reframe.reframe.reframe",
+        "documentation": {}
+    },
+    {
+        "label": "article_page",
+        "kind": 2,
+        "importPath": "reframe.reframe.reframe",
+        "description": "reframe.reframe.reframe",
+        "peekOfCode": "def article_page(title):\n    article = wikipediaapi.Wikipedia('en', extract_format=wikipediaapi.ExtractFormat.HTML).page(title)\n    content = article.text\n    return flask.render_template('reframe/templates/article.html', title=title, content=content)\n@frame_bp.route('/wiki/Special:Search')\ndef search():\n    query = flask.request.args.get('search')\n    results = wikipedia.search(query)\n    return flask.render_template('reframe/templates/results.html', query=query, results=results)",
+        "detail": "reframe.reframe.reframe",
+        "documentation": {}
+    },
+    {
+        "label": "search",
+        "kind": 2,
+        "importPath": "reframe.reframe.reframe",
+        "description": "reframe.reframe.reframe",
+        "peekOfCode": "def search():\n    query = flask.request.args.get('search')\n    results = wikipedia.search(query)\n    return flask.render_template('reframe/templates/results.html', query=query, results=results)",
+        "detail": "reframe.reframe.reframe",
+        "documentation": {}
+    },
+    {
+        "label": "frame_bp",
+        "kind": 5,
+        "importPath": "reframe.reframe.reframe",
+        "description": "reframe.reframe.reframe",
+        "peekOfCode": "frame_bp = flask.Blueprint('frame_bp', __name__, template_folder='../')\n@frame_bp.route('/')\ndef home():\n    return flask.render_template('reframe/templates/home.html')\n@frame_bp.route('/wiki/<title>')\ndef article_page(title):\n    article = wikipediaapi.Wikipedia('en', extract_format=wikipediaapi.ExtractFormat.HTML).page(title)\n    content = article.text\n    return flask.render_template('reframe/templates/article.html', title=title, content=content)\n@frame_bp.route('/wiki/Special:Search')",
+        "detail": "reframe.reframe.reframe",
+        "documentation": {}
+    },
+    {
+        "label": "error",
+        "kind": 2,
+        "importPath": "reframe.admin",
+        "description": "reframe.admin",
+        "peekOfCode": "def error(message):\n    \"\"\"Send an error log message.\"\"\"\n    print(f'{colorama.Fore.RED}[ReFrame ERROR] {message}')",
+        "detail": "reframe.admin",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app = reframe.create_app()\napp.run(port=9797, debug=True, use_evalex=False)",
+        "detail": "main",
+        "documentation": {}
+    }
+]
